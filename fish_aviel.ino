@@ -6,8 +6,8 @@ const int c1 =  5;
 const int o2 =  6;      // actuator 2
 const int c2 =  7;
 
-char buttonState1 = HIGH;
-char buttonState2 = HIGH;
+char buttonState1 = LOW;
+char buttonState2 = LOW;
 char relay1 = LOW;
 char relay2 = LOW;
 char relay3 = LOW;
@@ -61,11 +61,11 @@ void loop() {
   buttonState1 = digitalRead(buttonPin1);
   buttonState2 = digitalRead(buttonPin2);
 
-  if (buttonState1 == LOW) {
+  if (buttonState1 == HIGH) {
     counter1 = 5;
   }// if b1
 
-  if (buttonState2 == LOW) {
+  if (buttonState2 == HIGH) {
     counter2 = 5;
   }// if b2
 
